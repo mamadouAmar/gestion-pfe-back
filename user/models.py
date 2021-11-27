@@ -24,6 +24,3 @@ class Encadreur(User):
         abstract = True
         verbose_name = ("Encadreur")
         verbose_name_plural = ("Encadreurs")
-
-    def get_absolute_url(self):
-        return reverse("Encadreur_detail", kwargs={"pk": self.pk})

@@ -4,7 +4,6 @@ from user.models import Encadreur
 
 # Create your models here.
 class Entreprise(models.Model):
-
     nom = models.CharField(("intitule"), max_length=256)
     identifiant = models.CharField(("identifiant"), max_length=50)
     pays = models.CharField(("pays"), max_length=50)
@@ -20,9 +19,6 @@ class Entreprise(models.Model):
     def __str__(self):
         return self.nom
 
-    def get_absolute_url(self):
-        return reverse("Entreprise_detail", kwargs={"pk": self.pk})
-
 
 class Employe(Encadreur):
 
@@ -32,7 +28,3 @@ class Employe(Encadreur):
     class Meta:
         verbose_name = ("Employe")
         verbose_name_plural = ("Employes")
-
-    def get_absolute_url(self):
-        return reverse("Employe_detail", kwargs={"pk": self.pk})
-

@@ -20,9 +20,6 @@ class Reunion(models.Model):
     def __str__(self):
         return self.sujet
 
-    def get_absolute_url(self):
-        return reverse("Reunion_detail", kwargs={"pk": self.pk})
-
 
 class Message(models.Model):
     objet = models.CharField(("objet"), max_length=50)
@@ -37,6 +34,3 @@ class Message(models.Model):
 
     def __str__(self):
         return self.objet
-
-    def get_absolute_url(self):
-        return reverse("Message_detail", kwargs={"pk": self.pk})
