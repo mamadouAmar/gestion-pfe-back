@@ -9,11 +9,8 @@ class Jury(models.Model):
     membres = models.ManyToManyField(Encadreur, verbose_name=("membres"))
     
     class Meta:
-        verbose_name = _("Jury")
-        verbose_name_plural = _("Jurys")
-
-    def get_absolute_url(self):
-        return reverse("Jury_detail", kwargs={"pk": self.pk})
+        verbose_name = ("Jury")
+        verbose_name_plural = ("Jurys")
 
 
 class Soutenance(models.Model):

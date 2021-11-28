@@ -59,7 +59,7 @@ class Etudiant(User):
     numero_etudiant = models.CharField(("numero carte etudiant"), max_length=20)
     annee_d_entree = models.DateField(("Annee d'entree"), auto_now=False, auto_now_add=False)
     departement = models.ForeignKey(Departement, verbose_name=("departement"), on_delete=models.CASCADE)
-    competences = models.ManyToManyField(Competence, verbose_name=_("competences"))
+    competences = models.ManyToManyField(Competence, verbose_name=("competences"))
 
 
     class Meta:

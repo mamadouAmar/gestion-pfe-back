@@ -13,14 +13,13 @@ class User(models.Model):
         return self.prenom + " "+ self.nom
     
     class Meta:
-        abstract = True
-
+        verbose_name = ("Useur")
+        verbose_name_plural = ("Useurs")
 
 class Encadreur(User):
 
     matricule = models.CharField(("matricule"), max_length=50)
 
     class Meta:
-        abstract = True
         verbose_name = ("Encadreur")
         verbose_name_plural = ("Encadreurs")
