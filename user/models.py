@@ -13,8 +13,8 @@ class User(models.Model):
         return self.prenom + " "+ self.nom
     
     class Meta:
-        verbose_name = ("Useur")
-        verbose_name_plural = ("Useurs")
+        verbose_name = ("User")
+        verbose_name_plural = ("Users")
 
 class Encadreur(User):
 
