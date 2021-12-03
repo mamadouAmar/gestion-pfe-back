@@ -13,7 +13,7 @@ class Departement(models.Model):
         verbose_name_plural = ("Departements")
 
     def __str__(self):
-        return self.name
+        return self.intitule
 
 
 class Professeur(Encadreur):
