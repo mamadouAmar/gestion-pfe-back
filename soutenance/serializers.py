@@ -6,16 +6,16 @@ from soutenance.models import Appreciations, Jury, Soutenance
 class JurySerializer(serializers.ModelSerializer):
     class Meta:
         model = Jury
-        fields = all
+        fields = "__all__"
 
 
 class SoutenanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Soutenance
-        fields = all
+        fields = "__all__"
 
 
 class AppreciationsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Appreciations
-        fields = all
+        fields = "__all__"

@@ -6,11 +6,11 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = all
+        fields = "__all__"
 
 
 class EncadreurSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Encadreur
-        fields = all
+        fields = "__all__"

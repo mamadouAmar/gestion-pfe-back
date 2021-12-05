@@ -9,6 +9,7 @@ class Rapport(models.Model):
     projet = models.ForeignKey(ProjetFinDetudes, verbose_name=("PFE"), on_delete=models.CASCADE)
     auteur = models.ForeignKey(Soutenant, verbose_name=("soutenant"), on_delete=models.CASCADE)
     date = models.DateTimeField(("date d'archivage"), auto_now=False, auto_now_add=False)
+    file = models.FileField(("fichier"), upload_to=None, max_length=100)
 
     class Meta:
         verbose_name = ("Rapport")

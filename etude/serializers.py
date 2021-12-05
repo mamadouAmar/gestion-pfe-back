@@ -7,14 +7,14 @@ class DepartementSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Departement
-        fields = all
+        fields = "__all__"
 
 
 
 class ProfesseurSerializer(serializers.ModelSerializer):
     class Meta:
         model = Professeur
-        fields = all
+        fields = "__all__"
 
 
 

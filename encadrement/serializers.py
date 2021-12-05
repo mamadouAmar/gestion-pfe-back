@@ -5,10 +5,10 @@ from encadrement.models import Message, Reunion
 class ReunionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reunion
-        fields = all
+        fields = "__all__"
 
 
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
-        fields = all
+        fields = "__all__"
