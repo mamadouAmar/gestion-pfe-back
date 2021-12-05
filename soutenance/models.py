@@ -40,4 +40,4 @@ class Appreciations(models.Model):
 
     class Meta:
         verbose_name = ("Appreciations")
-        verbose_name_plural = ("Appreciationss")
+        verbose_name_plural = ("Appreciations")
