@@ -80,41 +80,41 @@ WSGI_APPLICATION = 'gestion_pfe.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-        'default': {
-            'ENGINE': 'djongo',
-            'ENFORCE_SCHEMA': True,
-            'LOGGING': {
-                'version': 1,
-                'loggers': {
-                    'djongo': {
-                        'level': 'DEBUG',
-                        'propogate': False,                        
-                    }
-                },
-            },
-            'NAME': 'gestionPFE',
-            'CLIENT': {
-                'host': 'localhost',
-                'port': 27017,
-                'username': 'user',
-                'password': 'password',
-                'authSource': 'admin',
-                'authMechanism': 'SCRAM-SHA-1'
-            }
-
-
-            # 'CLIENT': {
-            #     'host': 'mongodb://user:password@localhost:27017/gestionPFE?retryWrites=true&w=majority'
-            # }  
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'djongo',
+#             'ENFORCE_SCHEMA': True,
+#             'LOGGING': {
+#                 'version': 1,
+#                 'loggers': {
+#                     'djongo': {
+#                         'level': 'DEBUG',
+#                         'propogate': False,                        
+#                     }
+#                 },
+#             },
+#             'NAME': 'gestionPFE',
+#             'CLIENT': {
+#                 'host': 'localhost',
+#                 'port': 27017,
+#                 'username': 'user',
+#                 'password': 'password',
+#                 'authSource': 'admin',
+#                 'authMechanism': 'SCRAM-SHA-1'
+#             }
+
+
+#             # 'CLIENT': {
+#             #     'host': 'mongodb://user:password@localhost:27017/gestionPFE?retryWrites=true&w=majority'
+#             # }  
+#         }
+# }
 
 #mongodb://user:password@localhost:27017/?authSource=admin&readPreference=primary&appname=mongodb-vscode%200.6.14&ssl=false
 
