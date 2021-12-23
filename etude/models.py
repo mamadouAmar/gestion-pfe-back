@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.fields.related import ManyToManyField
+from entreprise.models import Entreprise
 
 from user.models import Encadreur, User
 
@@ -46,6 +47,7 @@ class ProjetFinDetudes(models.Model):
     departement = models.ForeignKey(Departement, verbose_name=("departement"), on_delete=models.CASCADE)
     encadreurs = models.ManyToManyField(Encadreur, verbose_name=("encadreurs"), null=True, blank=True)
     competences = models.ManyToManyField(Competence, verbose_name=("competences"), null=True, blank=True)
+    entreprise = models.ForeignKey(Entreprise, verbose_name= ("entreprise"), on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         verbose_name = ("PFE")
