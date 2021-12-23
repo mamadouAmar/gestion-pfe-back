@@ -22,24 +22,24 @@ class ProjetFinDetudesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ProjetFinDetudes
-        fields = all
+        fields = "__all__"
 
 
 class SoutenantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Soutenant
-        fields = all
+        fields = "__all__"
 
 
 class EtudiantSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Etudiant
-        fields = all
+        fields = "__all__"
 
 
 class CompetenceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Competence
-        fields = all
+        fields = "__all__"
