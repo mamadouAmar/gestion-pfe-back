@@ -9,8 +9,8 @@ class Entreprise(models.Model):
     pays = models.CharField(("pays"), max_length=50)
     ville = models.CharField(("ville"), max_length=50)
     addresse = models.CharField(("addresse"), max_length=50)
-    debut_partanariat = models.DateField(("debut partenariat"), auto_now=False, auto_now_add=False)
-    fin_partenariat = models.DateField(("fin partenariat"), auto_now=False, auto_now_add=False)
+    debut_partanariat = models.DateField(("debut partenariat"), auto_now=False, auto_now_add=False, null=True, blank=True)
+    fin_partenariat = models.DateField(("fin partenariat"), auto_now=False, auto_now_add=False, null=True)
 
     class Meta:
         verbose_name = ("Entreprise")

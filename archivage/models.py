@@ -9,7 +9,7 @@ class Rapport(models.Model):
     projet = models.ForeignKey(ProjetFinDetudes, verbose_name=("PFE"), on_delete=models.CASCADE)
     auteur = models.ForeignKey(Soutenant, verbose_name=("soutenant"), on_delete=models.CASCADE)
     date = models.DateTimeField(("date d'archivage"), auto_now=False, auto_now_add=False)
-    file = models.FileField(("fichier"), upload_to=None, max_length=100)
+    file = models.FileField(("fichier"), upload_to=None, max_length=100, null=True, blank=True)
 
     class Meta:
         verbose_name = ("Rapport")
@@ -20,8 +20,8 @@ class Rapport(models.Model):
 
 
 class Commentaires(models.Model):
-    rapport = models.ForeignKey(Rapport, verbose_name=("rapport"), on_delete=models.CASCADE)
-    auteur = models.ForeignKey(Etudiant, verbose_name=("auteur"), on_delete=models.CASCADE)
+    rapport = models.ForeignKey(Rapport, verbose_name=("rapport"), on_delete=models.CASCADE, null=True, blank=True)
+    auteur = models.ForeignKey(Etudiant, verbose_name=("auteur"), on_delete=models.CASCADE, null=True, blank=True)
     date = models.DateTimeField(("date"), auto_now=False, auto_now_add=False)
     commentaire = models.CharField(("commentaire"), max_length=256)
 
