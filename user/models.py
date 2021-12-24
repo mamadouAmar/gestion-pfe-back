@@ -7,7 +7,7 @@ class User(models.Model):
     nom = models.CharField(("nom"), max_length=30)
     telephone = models.CharField(("telephone"), max_length=11)
     mail = models.EmailField(("mail"), max_length=254)
-    password = models.CharField(("password"), max_length=256)
+    password = models.CharField(("password"), max_length=20)
 
     def __str__(self):
         return self.prenom + " "+ self.nom

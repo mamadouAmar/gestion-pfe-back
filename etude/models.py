@@ -21,7 +21,7 @@ class Professeur(Encadreur):
     specialite = models.CharField(("specialite"), max_length=50)
     role = models.CharField(("role"), max_length=100)
     description = models.TextField(("description"))
-    departement = models.ForeignKey(Departement, verbose_name=("departement"), on_delete=models.CASCADE)
+    departement = models.ForeignKey(Departement, verbose_name=("departement"), on_delete=models.CASCADE, null=True)
     
     class Meta:
         verbose_name = ("Professeur")
@@ -70,7 +70,7 @@ class Etudiant(User):
 
 
 class Soutenant(Etudiant):
-    projet = models.ForeignKey(ProjetFinDetudes, verbose_name=("PFE"), on_delete=models.CASCADE)
+    projet = models.ForeignKey(ProjetFinDetudes, verbose_name=("PFE"), on_delete=models.CASCADE, null=True, blank=True)
     
     class Meta:
         verbose_name = ("Soutenant")
