@@ -12,9 +12,9 @@ class EmployeSerializer(serializers.ModelSerializer):
 
 class EntrepriseSerializer(serializers.ModelSerializer):
 
-    employe = EmployeSerializer()
+    employes = EmployeSerializer(many=True, read_only=True)
 
     class Meta:
         model = Entreprise
-        fields = ["__all__", "employe"]
+        fields = "__all__"
 

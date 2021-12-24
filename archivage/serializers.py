@@ -14,4 +14,4 @@ class RapportSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Rapport
-        fields = ["__all__", 'commentaires']
+        fields = "__all__"

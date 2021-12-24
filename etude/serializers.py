@@ -1,3 +1,4 @@
+from django.db.models import manager
 from rest_framework import serializers
 from entreprise.serializers import EntrepriseSerializer
 
@@ -32,8 +33,8 @@ class ProfesseurSerializer(serializers.ModelSerializer):
 class ProjetFinDetudesSerializer(serializers.ModelSerializer):
 
     departement = DepartementSerializer(read_only=True)
-    encadreurs = EncadreurSerializer(read_only=True)
-    competences = CompetenceSerializer(read_only=False)
+    encadreurs = EncadreurSerializer(read_only=True, many=True)
+    competences = CompetenceSerializer(read_only=False, many=True)
     entreprise = EntrepriseSerializer(read_only=True)
 
     class Meta:
@@ -43,7 +44,7 @@ class ProjetFinDetudesSerializer(serializers.ModelSerializer):
 
 class SoutenantSerializer(serializers.ModelSerializer):
 
-    departement = DepartementSerializer()
+    departement = DepartementSerializer(read_only=True)
     projet = ProjetFinDetudesSerializer(read_only=True)
 
     class Meta:
@@ -53,7 +54,7 @@ class SoutenantSerializer(serializers.ModelSerializer):
 
 class EtudiantSerializer(serializers.ModelSerializer):
 
-    competences = CompetenceSerializer()
+    competences = CompetenceSerializer(read_only=True, many=True)
 
     class Meta:
         model = Etudiant
